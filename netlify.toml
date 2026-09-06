@@ -13,3 +13,5 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(self), microphone=(), geolocation=()"
     Strict-Transport-Security = "max-age=31536000; includeSubDomains"
+    # PRE-LAUNCH: keep all search engines off the site. REMOVE THIS LINE ON LAUNCH DAY.
+    X-Robots-Tag = "noindex, nofollow"
