@@ -1,0 +1,54 @@
+---
+const navLinks = [
+  { href: '/how-it-works', label: 'How It Works' },
+  { href: '/pricing', label: 'Pricing' },
+  { href: '/faq', label: 'FAQ' },
+];
+---
+
+<header class="sticky top-0 z-50 w-full border-b border-border-subtle bg-black/80 backdrop-blur-md">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+    <!-- Brand Logo -->
+    <a href="/" class="flex items-center gap-2 group">
+      <div class="w-9 h-9 rounded-lg bg-navy flex items-center justify-center border border-gold/40 group-hover:border-gold transition-colors">
+        <svg class="w-5 h-5 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+          <rect width="20" height="14" x="2" y="5" rx="2"></rect>
+        </svg>
+      </div>
+      <span class="text-xl font-bold tracking-tight text-white group-hover:text-gold transition-colors">
+        MyMail<span class="text-gold">hub</span>
+      </span>
+    </a>
+
+    <!-- Nav Desktop -->
+    <nav class="hidden md:flex items-center gap-8">
+      {navLinks.map(link => (
+        <a 
+          href={link.href} 
+          class="nav-link font-medium text-slate-300 hover:text-white transition-colors"
+        >
+          {link.label}
+        </a>
+      ))}
+    </nav>
+
+    <!-- Nav Actions -->
+    <div class="flex items-center gap-3">
+      <a 
+        href="/#demo" 
+        class="hidden sm:inline-flex items-center px-4 py-2 rounded-lg text-sm font-semibold text-slate-200 border border-border-subtle hover:border-slate-400 hover:text-white transition-colors"
+      >
+        Watch 2-Min Demo
+      </a>
+      <a 
+        href="https://cal.com" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        class="inline-flex items-center px-5 py-2.5 rounded-lg text-sm font-bold bg-gold text-black hover:bg-gold-hover transition-colors shadow-sm"
+      >
+        Book Onboarding
+      </a>
+    </div>
+  </div>
+</header>

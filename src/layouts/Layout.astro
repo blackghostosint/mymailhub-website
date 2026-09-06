@@ -1,0 +1,38 @@
+---
+import '../styles/global.css';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { 
+  title, 
+  description = "Intake counter software built by pack-and-ship store operators. Scan labels in seconds, notify customers automatically, and capture digital signatures on any screen. $39/mo all-in." 
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth bg-black text-white">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title} | MyMailhub</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={`${title} | MyMailhub`} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mymailhub.app" />
+  </head>
+  <body class="min-h-screen flex flex-col bg-black text-white selection:bg-gold selection:text-black">
+    <Navbar />
+    <main class="flex-grow">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

@@ -1,0 +1,159 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="How It Works | Counter Intake & Release Architecture" description="Explore the full counter workflow: Camera intake, AI label extraction, automated SMS/email alerts, digital signature release, and cloud security.">
+  <section class="pt-20 pb-16 bg-gradient-to-b from-navy/50 via-black to-black border-b border-border-subtle">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-navy border border-border-subtle text-xs font-semibold text-gold mb-6">
+        The Operator Architecture
+      </div>
+      <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-white mb-6">
+        Built for the speed of a real retail counter.
+      </h1>
+      <p class="text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
+        We didn't design MyMailhub in a corporate boardroom. We designed it behind a live pack-and-ship register to survive the 3:00 PM carrier rush.
+      </p>
+    </div>
+  </section>
+
+  <!-- DEEP DIVE SECTIONS -->
+  <section class="py-20 bg-black border-b border-border-subtle">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
+      
+      <!-- Feature 1: Camera Intake -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div class="space-y-4">
+          <span class="text-xs font-bold text-gold uppercase tracking-widest">Step 01: Intake</span>
+          <h2 class="text-3xl font-extrabold text-white">Smart Camera Label Scanning</h2>
+          <p class="text-sm sm:text-base text-slate-300 leading-relaxed">
+            Tap the intake icon on your counter tablet or phone. Center the shipping label in the viewfinder and snap. Our optical intelligence instantly extracts the carrier, tracking number, and customer name.
+          </p>
+          <ul class="space-y-2 text-sm text-slate-300 pt-2">
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>Handling ID Generation:</strong> Generates a short ID (e.g. A001) to write on the box</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>Multi-Package Batching:</strong> Tap "Continue with Same Mailbox" for multi-box dumps</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>Any Camera Orientation:</strong> No rotating images in your photo gallery</span>
+            </li>
+          </ul>
+        </div>
+        <div class="p-8 rounded-3xl bg-navy/40 border border-border-subtle">
+          <div class="border border-gold/30 rounded-2xl p-6 bg-black/60">
+            <div class="flex items-center justify-between text-xs text-slate-400 pb-4 border-b border-border-subtle">
+              <span>CAMERA VIEWFINDER</span>
+              <span class="text-gold font-mono">HANDLING ID: #A104</span>
+            </div>
+            <div class="py-6 text-center space-y-2">
+              <div class="text-xs font-mono text-slate-500 uppercase">AI OCR Extracted</div>
+              <div class="text-lg font-bold text-white">UPS GROUND • 1Z9999999999</div>
+              <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-green-950/60 border border-green-500/40 text-xs font-semibold text-green-400">
+                <span>Verified Match: Box #245 (Diana Vance)</span>
+              </div>
+            </div>
+            <div class="text-xs text-slate-400 text-center border-t border-border-subtle pt-4">
+              Saved in 1 tap • Instant SMS triggered
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 2: Automated Customer Alerts -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div class="p-8 rounded-3xl bg-navy/40 border border-border-subtle md:order-1">
+          <div class="border border-border-subtle rounded-2xl p-6 bg-black/60 space-y-4">
+            <div class="text-xs font-mono text-gold uppercase tracking-wider">Automated Outbound Alert</div>
+            <div class="p-4 rounded-xl bg-navy/60 border border-border-subtle text-xs text-slate-200 leading-relaxed font-sans">
+              "Hi Diana! You have 2 packages waiting for pickup at Mailbox Plus. Please have your ID or signature ready when you stop by."
+            </div>
+            <div class="flex items-center justify-between text-xs text-slate-400 pt-2">
+              <span>Delivered via SMS & Email</span>
+              <span class="text-green-400">Sent instantly</span>
+            </div>
+          </div>
+        </div>
+        <div class="space-y-4 md:order-2">
+          <span class="text-xs font-bold text-gold uppercase tracking-widest">Step 02: Notifications</span>
+          <h2 class="text-3xl font-extrabold text-white">Hands-Free Customer Communication</h2>
+          <p class="text-sm sm:text-base text-slate-300 leading-relaxed">
+            The moment you hit "Save Intake", the system dispatches customer notifications automatically. No manual dialing, no copy-pasting tracking numbers, and no extra outbound messaging software required.
+          </p>
+          <ul class="space-y-2 text-sm text-slate-300 pt-2">
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>Zero-Config Messaging:</strong> No separate Twilio accounts or A2P registration hurdles</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>Bulk Reminders:</strong> Clear old back-shelf inventory with 1-click pickup reminders</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Feature 3: Release & Digital Signatures -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div class="space-y-4">
+          <span class="text-xs font-bold text-gold uppercase tracking-widest">Step 03: Release & Liability</span>
+          <h2 class="text-3xl font-extrabold text-white">E-Signatures & Audit Trail</h2>
+          <p class="text-sm sm:text-base text-slate-300 leading-relaxed">
+            When the customer arrives at your counter, type their box number. Tap "Release All", spin your counter screen around, and capture their digital signature.
+          </p>
+          <ul class="space-y-2 text-sm text-slate-300 pt-2">
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>Timestamped Signature Proof:</strong> Permanently stored with date and time</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>Dispute Resolution:</strong> Pull up the exact signature thumbnail in 5 seconds</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>Account Holds:</strong> Instantly warns staff if an account is suspended or past-due</span>
+            </li>
+          </ul>
+        </div>
+        <div class="p-8 rounded-3xl bg-navy/40 border border-border-subtle">
+          <div class="border border-border-subtle rounded-2xl p-6 bg-black/60 text-center space-y-4">
+            <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Customer Signature Capture</div>
+            <div class="h-28 rounded-xl bg-navy/30 border border-dashed border-slate-600 flex items-center justify-center text-slate-500 font-mono text-xs">
+              [ Customer Signs with Finger on Tablet Screen ]
+            </div>
+            <div class="flex items-center justify-between text-xs text-slate-400 pt-2">
+              <span>Box #245 • 2 Items</span>
+              <span class="text-gold font-bold">Release Confirmed</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BOTTOM CTA -->
+  <section class="py-20 bg-black text-center">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-extrabold text-white tracking-tight mb-4">
+        Ready to see how fast your counter can run?
+      </h2>
+      <p class="text-base text-slate-300 mb-8 leading-relaxed">
+        Book an onboarding session. Bring your PostalMate, CashMate, or Excel roster and we’ll load it with you.
+      </p>
+      <a 
+        href="https://cal.com" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        class="inline-flex items-center px-8 py-4 rounded-xl text-base font-bold bg-gold text-black hover:bg-gold-hover transition-colors"
+      >
+        Book Free Onboarding Call
+      </a>
+    </div>
+  </section>
+</Layout>
